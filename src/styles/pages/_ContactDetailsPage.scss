@@ -1,0 +1,19 @@
+.ContactDetailsPage {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        svg {
+            width: 1.5rem;
+        }
+    }
+    .ContactInfo {
+        .ImgContainer {
+            width: 7.4rem;
+            height: 7.4rem;
+            background-color: $clr6;
+            border-radius: 50%;
+        }
+    }
+}

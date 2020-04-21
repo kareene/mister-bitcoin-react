@@ -1,0 +1,8 @@
+.ContactList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li:not(:last-child) {
+        margin-bottom: 1.25rem;
+    }
+}

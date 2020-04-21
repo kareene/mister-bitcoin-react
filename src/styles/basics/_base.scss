@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: unset;
+}
+
+input {
+    border: 1px solid $clr5;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.CallToAction {
+    color: $clr4;
+    background-color: $clr2;
+    border: 2px solid $clr1;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.InvalidMessage {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    color: $clr1;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.hidden {
+    visibility: hidden;
+}

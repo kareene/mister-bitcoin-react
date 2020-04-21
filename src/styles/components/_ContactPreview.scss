@@ -1,0 +1,18 @@
+.ContactPreview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: $clr4;
+    background-color: $clr6;
+    border-radius: 100vh;
+    .ImgContainer {
+        width: 3.7rem;
+        height: 3.7rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+    }
+    h3 {
+        margin: 0;
+    }
+}
