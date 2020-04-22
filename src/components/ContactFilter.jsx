@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 
 export class ContactFilter extends Component {
-    state = {
-        term: ''
-    };
-
+    
     constructor(props) {
         super(props);
         this.state = { ...props.filterBy };
@@ -16,10 +13,14 @@ export class ContactFilter extends Component {
             this.props.onFilter({ ...this.state });
         });
     };
+    
+    onSubmitHandler = (ev) => {
+        ev.preventDefault();
+    }
 
     render() {
         return (
-            <form className="ContactFilter">
+            <form className="ContactFilter" onSubmit={this.onSubmitHandler}>
                 <input type="text" name="term" placeholder="Search"
                     onChange={this.onChangeHandler}
                     value={this.state.term}

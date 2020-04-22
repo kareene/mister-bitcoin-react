@@ -10,18 +10,14 @@ import ContactList from '../components/ContactList';
 import ContactFilter from '../components/ContactFilter';
 
 export class ContactPage extends Component {
+
   state = {
     filterBy: { term: '' },
   };
 
-  async componentDidMount() {
-    this.props.loadContacts();
+  componentDidMount() {
+    this.loadContacts();
   }
-
-  // loadContacts = async () => {
-  //   const contacts = await ContactService.getContacts(this.state.filterBy);
-  //   this.setState({ contacts });
-  // };
 
   onFilterHandler = (filterBy) => {
     this.setState((prevState) => {
@@ -32,6 +28,10 @@ export class ContactPage extends Component {
         },
       };
     }, this.loadContacts);
+  };
+
+  loadContacts = () => {
+    this.props.loadContacts(this.state.filterBy);
   };
 
   render() {
@@ -57,7 +57,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  loadContacts 
+  loadContacts
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactPage);
