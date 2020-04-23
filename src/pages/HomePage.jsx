@@ -22,7 +22,7 @@ export class HomePage extends Component {
     render() {
         const { loggedinUser } = this.props;
         const { btcRate } = this.state;
-        if (!loggedinUser) return <section></section>;
+        if (!loggedinUser) return false;
         return (
             <section className="HomePage">
                 <h2>Hello {loggedinUser.name}!</h2>

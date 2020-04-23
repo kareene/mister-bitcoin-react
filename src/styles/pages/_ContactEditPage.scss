@@ -30,12 +30,6 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            div {
-                width: 85%;
-                input {
-                    width: 100%;
-                }
-            }
             label {
                 padding-top: 0.25rem;
                 span {
@@ -44,9 +38,7 @@
             }
             input {
                 width: 85%;
-                &.no-invalid-message {
-                    margin-bottom: 1.4rem;
-                }
+                margin-bottom: 1.4rem;
             }
         }
         button {

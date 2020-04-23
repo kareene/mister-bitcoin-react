@@ -32,9 +32,14 @@ export class ContactDetailsPage extends Component {
 
     async loadContact() {
         const id = this.props.match.params.id;
-        await this.props.loadContact(id);
-        const { contact } = this.props;
-        if (contact) this.setState({ contactImg: `https://robohash.org/${contact.name}` });
+        try {
+            await this.props.loadContact(id);
+            const { contact } = this.props;
+            this.setState({ contactImg: `https://robohash.org/${contact.name}` });
+        } catch(err) {
+            console.log(err);
+            this.props.history.push('/contact');
+        }
     }
 
     onTransferCoins = (amount) => {
@@ -42,9 +47,9 @@ export class ContactDetailsPage extends Component {
     }
 
     render() {
-        const { contact, loggedinUser, onTransferCoins } = this.props;
+        const { contact, loggedinUser } = this.props;
         const { contactImg } = this.state;
-        if (!contact) return <section></section>;
+        if (!contact) return false;
         return (
             <section className="ContactDetailsPage">
                 <nav>
@@ -64,8 +69,9 @@ export class ContactDetailsPage extends Component {
                     <p>Email: {contact.email}</p>
                 </article>
                 <TransferFund contact={contact} maxCoins={loggedinUser.coins}
-                    onTransferCoins={onTransferCoins} />
-                <MovesList moves={loggedinUser.moves} toContact={contact.name} />
+                    onTransferCoins={this.onTransferCoins} />
+                <MovesList moves={[...loggedinUser.moves].filter(move => move.toId === contact._id)}
+                    toContact={contact.name} />
             </section>
         )
     }

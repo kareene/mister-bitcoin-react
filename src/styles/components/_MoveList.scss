@@ -5,7 +5,12 @@
     h3 {
         border-bottom: 1px solid $clr5;
     }
-    article {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
         border-bottom: 1px solid $clr5;
     }
 }

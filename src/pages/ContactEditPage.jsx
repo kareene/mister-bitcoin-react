@@ -10,6 +10,7 @@ import robotImg from '../assets/img/robot.svg';
 export class ContactEditPage extends Component {
     
     state = {
+        contact: null,
         contactImg: ''
     }
 
@@ -29,23 +30,29 @@ export class ContactEditPage extends Component {
 
     async loadContact() {
         const id = this.props.match.params.id;
-        await this.props.loadContact(id);
-        const { contact } = this.props;
-        if (contact) {
-            const contactImg = (contact.name) ? `https://robohash.org/${contact.name}` : robotImg;
-            this.setState({ contactImg });
+        try {
+            await this.props.loadContact(id);
+            const { currContact } = this.props;
+            const contactImg = (currContact.name)
+                ? `https://robohash.org/${currContact.name}`
+                : robotImg;
+            this.setState({ contact: { ...currContact }, contactImg });
+        } catch(err) {
+            console.log(err);
+            this.props.history.push('/contact');
         }
     }
 
     onChangeHandler = (ev) => {
         const { value, name } = ev.target;
-        this.setState({ [name]: value });
+        this.setState({ contact: { ...this.state.contact, [name]: value } });
     }
     
-    onSubmitHandler = (ev) => {
+    onSubmitHandler = async (ev) => {
         ev.preventDefault();
-        // this.props.signup(this.state.username);
-        // this.setState({ username: '' });
+        const contact = await this.props.saveContact(this.state.contact);
+        if (contact) this.props.history.push(`/contact/${contact._id}`);
+        else this.props.history.push('/contact');
     }
 
     onBackClickHandler = (ev) => {
@@ -53,26 +60,61 @@ export class ContactEditPage extends Component {
     }
     
     onDeleteClickHandler = (ev) => {
+        this.props.deleteContact(this.state.contact._id);
+        this.props.history.push('/contact');
     }
 
     render() {
+        const { contactImg, contact } = this.state;
+        if (!contact) return false;
         return (
             <section className="ContactEditPage">
                 <nav>
                     <button onClick={this.onBackClickHandler}>
                         <BackImg title="Back" />
                     </button>
-                    <button onClick={this.onDeleteClickHandler}>
+                    <button className={(!contact._id) ? 'hidden' : ''} onClick={this.onDeleteClickHandler}>
                         <DeleteImg title="Delete" />
                     </button>
                 </nav>
+                <form onSubmit={this.onSubmitHandler}>
+                    <div className="ImgContainer">
+                        <img src={contactImg} alt={contact.name} />
+                    </div>
+                    <section>
+                        <label htmlFor="name">Name<span>*</span></label>
+                        <input type="text" name="name" id="name"
+                            required
+                            placeholder="Name"
+                            onChange={this.onChangeHandler}
+                            value={contact.name}
+                        />
+                    </section>
+                    <section>
+                        <label htmlFor="phone">Phone</label>
+                        <input type="text" name="phone" id="phone"
+                            placeholder="Phone"
+                            onChange={this.onChangeHandler}
+                            value={contact.phone}
+                        />
+                    </section>
+                    <section>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" id="email"
+                            placeholder="Email"
+                            onChange={this.onChangeHandler}
+                            value={contact.email}
+                        />
+                    </section>
+                    <button className="CallToAction" type="submit">Save</button>
+                </form>
             </section>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    contact: state.contact.currContact
+    currContact: state.contact.currContact
 })
 
 const mapDispatchToProps = {

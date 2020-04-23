@@ -10,13 +10,8 @@ export function loadContacts(filterBy) {
 export function loadContact(contactId) {
     return async dispatch => {
         if (contactId) {
-            try {
-                const contact = await ContactService.getContactById(contactId);
-                dispatch({ type: 'SET_CURR_CONTACT', contact });
-            } catch(err) {
-                console.log(err);
-                // TODO this.props.history.push('/contact');
-            }
+            const contact = await ContactService.getContactById(contactId);
+            dispatch({ type: 'SET_CURR_CONTACT', contact });
         } else {
             const contact = ContactService.getEmptyContact();
             dispatch({ type: 'SET_CURR_CONTACT', contact });
