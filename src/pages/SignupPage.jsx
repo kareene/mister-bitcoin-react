@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { signup } from '../actions/UserActions';
+import { signup } from '../store/actions/UserActions';
 
 import { ReactComponent as BitcoinImg } from '../assets/img/bitcoin.svg';
 

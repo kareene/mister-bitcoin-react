@@ -1,16 +1,15 @@
-/* SETUP */
 @import 'setup/variables';
-/* BASICS */
+
 @import 'basics/base';
 @import 'basics/layout';
-/* PAGES */
+
 @import 'pages/ContactEditPage';
 @import 'pages/ContactPage';
 @import 'pages/StatisticPage';
 @import 'pages/SignupPage';
 @import 'pages/HomePage';
 @import 'pages/ContactDetailsPage';
-/* COMPONENTS */
+
 @import 'components/TransferFund';
 @import 'components/ContactList';
 @import 'components/ContactFilter';

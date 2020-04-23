@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { loadContact, clearContact, saveContact, deleteContact } from '../actions/ContactActions';
+import { loadContact, clearContact, saveContact, deleteContact } from '../store/actions/ContactActions';
 
 import { ReactComponent as BackImg } from '../assets/img/back-arrow.svg';
 import { ReactComponent as DeleteImg } from '../assets/img/trash.svg';
@@ -73,7 +73,7 @@ export class ContactEditPage extends Component {
                     <button onClick={this.onBackClickHandler}>
                         <BackImg title="Back" />
                     </button>
-                    <button className={(!contact._id) ? 'hidden' : ''} onClick={this.onDeleteClickHandler}>
+                    <button hidden={!contact._id} onClick={this.onDeleteClickHandler}>
                         <DeleteImg title="Delete" />
                     </button>
                 </nav>

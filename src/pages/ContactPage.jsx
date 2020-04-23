@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { loadContacts } from '../actions/ContactActions';
+import { loadContacts } from '../store/actions/ContactActions';
 
 import { ReactComponent as AddImg } from '../assets/img/plus.svg';
 

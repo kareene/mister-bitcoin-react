@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { loadUser } from '../actions/UserActions';
+import { loadUser } from '../store/actions/UserActions';
 import BitcoinService from '../services/BitcoinService'
 import MovesList from '../components/MovesList';
 

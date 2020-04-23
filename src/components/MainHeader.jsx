@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { loadUser, logout } from '../actions/UserActions';
+import { loadUser, logout } from '../store/actions/UserActions';
 
 import { ReactComponent as HomeImg } from '../assets/img/home.svg';
 import { ReactComponent as ContactsImg } from '../assets/img/contacts.svg';

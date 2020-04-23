@@ -1,4 +1,4 @@
-import ContactService from '../services/ContactService';
+import ContactService from '../../services/ContactService';
 
 export function loadContacts(filterBy) {
     return async dispatch => {

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { loadContact, clearContact } from '../actions/ContactActions';
-import { addMove } from '../actions/UserActions';
+import { loadContact, clearContact } from '../store/actions/ContactActions';
+import { addMove } from '../store/actions/UserActions';
 import { TransferFund } from '../components/TransferFund';
 import { MovesList } from '../components/MovesList';
 
