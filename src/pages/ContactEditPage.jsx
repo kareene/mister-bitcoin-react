@@ -92,7 +92,7 @@ export class ContactEditPage extends Component {
                     </section>
                     <section>
                         <label htmlFor="phone">Phone</label>
-                        <input type="text" name="phone" id="phone"
+                        <input type="tel" name="phone" id="phone"
                             placeholder="Phone"
                             onChange={this.onChangeHandler}
                             value={contact.phone}

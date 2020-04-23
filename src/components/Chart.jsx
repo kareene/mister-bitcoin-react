@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Chart as GoogleChart } from 'react-google-charts';
 
-export function Chart() {
+export function Chart(props) {
+    const { chart } = props;
     return (
-        <div className="Chart">
-            Chart
-        </div>
+        <article className="Chart">
+            <h3>{chart.title}</h3>
+            <GoogleChart className="GoogleChart"
+                chartType={chart.type}
+                data={chart.data}
+                options={chart.options}
+            />
+            <p>{chart.description}</p>
+        </article>
     )
 }
 
