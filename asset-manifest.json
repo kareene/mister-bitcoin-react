@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/css/main.b727a35b.chunk.css",
+    "main.js": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/main.77a66606.chunk.js",
+    "main.js.map": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/main.77a66606.chunk.js.map",
+    "runtime-main.js": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/runtime-main.a66ddab9.js",
+    "runtime-main.js.map": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/runtime-main.a66ddab9.js.map",
+    "static/js/2.36df18e5.chunk.js": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/2.36df18e5.chunk.js",
+    "static/js/2.36df18e5.chunk.js.map": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/2.36df18e5.chunk.js.map",
+    "index.html": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/index.html",
+    "precache-manifest.cf5aeab3f6b2c7ad563e942dfd7c5513.js": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/precache-manifest.cf5aeab3f6b2c7ad563e942dfd7c5513.js",
+    "service-worker.js": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/service-worker.js",
+    "static/css/main.b727a35b.chunk.css.map": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/css/main.b727a35b.chunk.css.map",
+    "static/js/2.36df18e5.chunk.js.LICENSE.txt": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/js/2.36df18e5.chunk.js.LICENSE.txt",
+    "static/media/back-arrow.3b22be57.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/back-arrow.3b22be57.svg",
+    "static/media/bitcoin.6eeab5de.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/bitcoin.6eeab5de.svg",
+    "static/media/coins.8e559a00.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/coins.8e559a00.svg",
+    "static/media/contacts.660e8ec7.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/contacts.660e8ec7.svg",
+    "static/media/edit.be1e37dd.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/edit.be1e37dd.svg",
+    "static/media/home.65ea766f.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/home.65ea766f.svg",
+    "static/media/logout.233dc6aa.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/logout.233dc6aa.svg",
+    "static/media/plus.899a4c5d.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/plus.899a4c5d.svg",
+    "static/media/robot.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/robot.1a57f0ec.svg",
+    "static/media/statistics.c8667c10.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/statistics.c8667c10.svg",
+    "static/media/trash.3007170f.svg": "/%E2%80%8Bhttps://kareene.github.io/mister-bitcoin-react/static/media/trash.3007170f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a66ddab9.js",
+    "static/js/2.36df18e5.chunk.js",
+    "static/css/main.b727a35b.chunk.css",
+    "static/js/main.77a66606.chunk.js"
+  ]
+}
