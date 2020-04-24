@@ -6,11 +6,13 @@ export function Chart(props) {
     return (
         <article className="Chart">
             <h3>{chart.title}</h3>
-            <GoogleChart className="GoogleChart"
-                chartType={chart.type}
-                data={chart.data}
-                options={chart.options}
-            />
+            <div className="GoogleChart">
+                <GoogleChart
+                    chartType={chart.type}
+                    data={chart.data}
+                    options={chart.options}
+                />
+            </div>
             <p>{chart.description}</p>
         </article>
     )

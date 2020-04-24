@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
 import PrivateRoute from './components/PrivateRoute';
@@ -26,6 +26,7 @@ function App() {
             <PrivateRoute path="/contact/edit/:id?" component={ContactEditPage} />
             <PrivateRoute path="/contact/:id" component={ContactDetailsPage} />
             <PrivateRoute path="/statistic" component={StatisticPage} />
+            <Redirect from="*" to="/" />
           </Switch>
         </main>
       </Router>

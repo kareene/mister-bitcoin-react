@@ -7,9 +7,21 @@
         width: 6rem;
         height: 6rem;
         margin-bottom: 1.5rem;
+        animation: spin 6s infinite ease;
     }
     input {
         width: 12rem;
         margin-bottom: 1.4rem;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg)
+    }
+    75% {
+        transform: rotateY(360deg);
+    }
+    100% {
+        transform: rotateY(360deg);
     }
 }
